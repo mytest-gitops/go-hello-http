@@ -63,11 +63,11 @@ jobs:
         sed -i "s/^appVersion:.*$/appVersion: ${{needs.tag.outputs.new_tag}}/g" go-hello-http/Chart.yaml
     - name: Commit files
       run: |
-        git config --local user.email "guotiexin@gmail.com"
-        git config --local user.name "IronCore864"
+        git config --local user.email "warrenlucky@126.com"
+        git config --local user.name "warrenlucky"
         git commit -m "Bump appVersion" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        repository: IronCore864/gitops-argocd
+        repository: warrenlucky/gitops-argocd
         github_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
