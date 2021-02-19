@@ -57,7 +57,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         persist-credentials: false
-        repository: IronCore864/gitops-argocd
+        repository: warrenlucky/gitops-argocd
     - name: Create local changes
       run: |
         sed -i "s/^appVersion:.*$/appVersion: ${{needs.tag.outputs.new_tag}}/g" go-hello-http/Chart.yaml
